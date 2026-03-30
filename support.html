@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#005b5d",
+              "outline-variant": "#45484f",
+              "on-secondary": "#004f58",
+              "secondary-fixed-dim": "#00d8ec",
+              "surface-container-highest": "#22262f",
+              "primary-fixed": "#00f5f9",
+              "surface-container": "#161a21",
+              "primary-container": "#0bfbff",
+              "surface-container-lowest": "#000000",
+              "outline": "#73757d",
+              "on-primary-fixed-variant": "#006264",
+              "secondary-fixed": "#00e7fd",
+              "tertiary-fixed": "#62b7ff",
+              "background": "#0b0e14",
+              "inverse-primary": "#006a6c",
+              "on-error-container": "#ffa8a3",
+              "on-error": "#490006",
+              "tertiary-fixed-dim": "#3eaafa",
+              "primary-dim": "#00e5e9",
+              "on-tertiary-fixed": "#00192d",
+              "error": "#ff716c",
+              "on-primary-fixed": "#004344",
+              "tertiary-dim": "#36a4f4",
+              "surface": "#0b0e14",
+              "on-surface": "#ecedf6",
+              "on-background": "#ecedf6",
+              "error-dim": "#d7383b",
+              "on-tertiary": "#002c49",
+              "surface-variant": "#22262f",
+              "on-surface-variant": "#a9abb3",
+              "on-secondary-fixed-variant": "#005963",
+              "secondary": "#00e7fd",
+              "on-secondary-fixed": "#003a41",
+              "surface-container-high": "#1c2028",
+              "surface-dim": "#0b0e14",
+              "on-tertiary-container": "#001f35",
+              "secondary-dim": "#00d8ec",
+              "tertiary-container": "#32a2f2",
+              "tertiary": "#48afff",
+              "primary-fixed-dim": "#00e5e9",
+              "surface-tint": "#b3feff",
+              "secondary-container": "#006973",
+              "on-secondary-container": "#e7fcff",
+              "surface-container-low": "#10131a",
+              "on-primary": "#006566",
+              "inverse-on-surface": "#52555c",
+              "surface-bright": "#282c36",
+              "primary": "#b3feff",
+              "error-container": "#9f0519",
+              "on-tertiary-fixed-variant": "#003c61",
+              "inverse-surface": "#f9f9ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(22, 26, 33, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .neon-glow {
+        box-shadow: 0 0 15px rgba(11, 251, 255, 0.15);
+      }
+      body {
+        background-color: #0b0e14;
+        color: #ecedf6;
+      }
+    </style>
+</head>
+<body class="font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar Implementation -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b0e14]/70 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,251,255,0.06)] font-['Manrope'] font-medium text-sm tracking-wide antialiased">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#ecedf6]">MagicWand</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#a9abb3] hover:text-[#ecedf6] transition-colors" href="#">Features</a>
+<a class="text-[#a9abb3] hover:text-[#ecedf6] transition-colors" href="#">Privacy</a>
+<a class="text-[#a9abb3] hover:text-[#ecedf6] transition-colors" href="#">Security</a>
+<a class="text-[#b3feff] border-b-2 border-[#b3feff] pb-1" href="#">Support</a>
+</div>
+<button class="bg-[#00FBFF] text-[#001f35] font-bold px-6 py-2 rounded-full scale-95 active:scale-90 transition-transform text-sm hover:bg-[#1c2028] hover:text-[#ecedf6]">
+                Download
+            </button>
+</div>
+<div class="bg-[#22262f]/30 h-[1px] w-full"></div>
+</nav>
+<main class="pt-24 pb-12 px-4 md:px-8 max-w-7xl mx-auto space-y-16">
+<!-- Hero Section -->
+<section class="text-center py-12 md:py-20">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium mb-6 animate-pulse">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
+                SECURE &amp; PRIVATE
+            </div>
+<h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                Support &amp; FAQ
+            </h1>
+<h2 class="font-headline text-2xl md:text-3xl font-light text-on-surface-variant leading-relaxed">
+                技术支持与常见问题
+            </h2>
+</section>
+<!-- Bento Grid FAQ -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 glass-card p-8 rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 group">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-primary-dim text-sm font-label block mb-2">Issue #01</span>
+<h3 class="text-xl font-headline font-bold mb-2">为什么我的应用没有按时隐藏？</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Why is my app not hidden on time?</p>
+<p class="text-on-surface leading-relaxed opacity-80">
+                            请确保您已授予 MagicWand **屏幕使用时间 (Screen Time API)** 权限。如果权限已授予但仍未生效，请尝试重新启动设备以重置系统限制守护进程。
+                        </p>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl opacity-20 group-hover:opacity-100 transition-opacity">auto_fix_high</span>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-500">
+<span class="text-primary-dim text-sm font-label block mb-2">Issue #02</span>
+<h3 class="text-xl font-headline font-bold mb-2">地理围栏不生效？</h3>
+<p class="text-on-surface-variant text-sm mb-4 italic">Geofencing not working?</p>
+<p class="text-on-surface text-sm leading-relaxed opacity-80">
+                    需将定位权限设置为“始终允许”。系统需要后台位置更新来触发魔法逻辑。
+                </p>
+<div class="mt-8 flex justify-center">
+<img class="w-full h-32 object-cover rounded-lg opacity-50 grayscale hover:grayscale-0 transition-all" data-alt="abstract dark visualization of geometric pulses and radar waves in deep blue tones with glowing neon circular outlines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNz_qxthY0CottzsK0BN6C4XZgPDwSxlHOaFHVy1AHJB0UvJtKq5ipoULe_-1ewqJhqP-VidoDaZCbKjzlJ0IRbSFFW5HUjiNdgqii7U3pEHjrz989vSjHEOxWm4sFqqNtM-eionCoQ4IHcL6-8-HsgcQbl6hfy9vjPaAlZrykZyZuqQhmBgubirCLNxhixX03vKEOxH_v1_rsfe5Ru2jH5SJ1EdMU9U8UgmMLMQ7P0xeI-LDZTFjJ7WdqHy1GWAnBDxkeoeLVYvqK"/>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-500">
+<span class="text-primary-dim text-sm font-label block mb-2">Issue #03</span>
+<h3 class="text-xl font-headline font-bold mb-2">如何取消订阅？</h3>
+<p class="text-on-surface-variant text-sm mb-4 italic">Cancel subscription?</p>
+<p class="text-on-surface text-sm leading-relaxed opacity-80">
+                    前往“设置”&gt;“Apple ID”&gt;“订阅”。所有交易均由 Apple 官方处理，确保您的资金与信息安全。
+                </p>
+</div>
+<div class="md:col-span-2 glass-card p-8 rounded-xl border border-outline-variant/10 flex flex-col md:flex-row gap-8 items-center bg-gradient-to-br from-surface-container to-background">
+<div class="flex-1">
+<h3 class="text-2xl font-headline font-bold mb-2 text-primary">Security &amp; Privacy First</h3>
+<p class="text-on-surface leading-relaxed opacity-80 mb-4">
+                        MagicWand 严格遵守 Apple 的隐私规范。我们仅使用 **Screen Time API** 来管理应用状态，绝不会收集您的浏览记录或应用内数据。您的位置信息仅用于本地触发地理围栏，不会上传至任何服务器。
+                    </p>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 text-xs text-on-surface-variant uppercase tracking-widest">
+<span class="material-symbols-outlined text-xs">verified_user</span> Local Processing
+                        </div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant uppercase tracking-widest">
+<span class="material-symbols-outlined text-xs">shield</span> Zero Data Collection
+                        </div>
+</div>
+</div>
+<div class="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 neon-glow">
+<span class="material-symbols-outlined text-5xl text-primary" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+</div>
+</section>
+<!-- Feedback Form -->
+<section class="max-w-2xl mx-auto py-12">
+<div class="text-center mb-10">
+<h3 class="font-headline text-3xl font-bold mb-2">Feedback &amp; Support</h3>
+<p class="text-on-surface-variant">反馈与建议</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant ml-1">Name / 姓名</label>
+<input class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary/40 rounded-xl py-4 px-6 text-on-surface placeholder:text-outline" placeholder="Your name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant ml-1">Email / 邮箱</label>
+<input class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary/40 rounded-xl py-4 px-6 text-on-surface placeholder:text-outline" placeholder="email@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant ml-1">Message / 内容</label>
+<textarea class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary/40 rounded-xl py-4 px-6 text-on-surface placeholder:text-outline" placeholder="How can we help you?" rows="5"></textarea>
+</div>
+<button class="w-full py-4 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary font-bold text-lg tracking-wide shadow-[0_0_20px_rgba(11,251,255,0.3)] hover:scale-[1.02] active:scale-95 transition-all" type="submit">
+                    Send Message / 发送
+                </button>
+</form>
+</section>
+</main>
+<!-- Footer Implementation -->
+<footer class="w-full py-12 border-t border-[#22262f]/50 bg-[#0b0e14] font-['Inter'] text-xs text-[#a9abb3]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-lg font-black text-[#ecedf6]">MagicWand</div>
+<p class="opacity-80">© 2024 MagicWand. Precision Privacy forged in light.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#a9abb3] hover:text-[#b3feff] transition-colors" href="#">Terms of Service</a>
+<a class="text-[#a9abb3] hover:text-[#b3feff] transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#a9abb3] hover:text-[#b3feff] transition-colors" href="#">Cookie Settings</a>
+<a class="text-[#a9abb3] hover:text-[#b3feff] transition-colors" href="#">Press Kit</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation (Hidden on desktop) -->
+</body></html>
