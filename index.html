@@ -1,120 +1,272 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>应用魔法棒 App MagicWand - 官方支持页面</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    
-    <style>
-        /* 自定义额外样式：增加一些 iOS 的精致感 */
-        body {
-            max-width: 900px;
-            padding: 40px 20px;
-        }
-        .header-card {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #0071e3 0%, #00c6ff 100%);
-            color: white;
-            border-radius: 24px;
-            margin-bottom: 40px;
-        }
-        .header-card h1 {
-            margin: 0;
-            font-size: 3rem;
-            color: white; /* 覆盖 water.css 默认颜色 */
-        }
-        .tagline {
-            font-size: 1.4rem;
-            opacity: 0.9;
-        }
-        section {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e1e1e1;
-        }
-        .privacy-box {
-            background: #f0f4f8;
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 6px solid #0071e3;
-        }
-        /* 暗黑模式适配 */
-        @media (prefers-color-scheme: dark) {
-            .privacy-box {
-                background: #1e262f;
-                border-left-color: #00c6ff;
-            }
-            section {
-                border-top: 1px solid #333;
-            }
-        }
-        .badge {
-            display: inline-block;
-            background: #0071e3;
-            color: white;
-            padding: 2px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 10px;
-        }
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>App MagicWand - 魔法一挥，隐私无踪</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#001f35",
+              "secondary-container": "#006973",
+              "surface-bright": "#282c36",
+              "on-surface": "#ecedf6",
+              "background": "#0b0e14",
+              "primary": "#b3feff",
+              "tertiary": "#48afff",
+              "surface-variant": "#22262f",
+              "on-primary-fixed": "#004344",
+              "surface-container-highest": "#22262f",
+              "tertiary-fixed-dim": "#3eaafa",
+              "on-surface-variant": "#a9abb3",
+              "tertiary-container": "#32a2f2",
+              "on-primary": "#006566",
+              "primary-fixed": "#00f5f9",
+              "tertiary-dim": "#36a4f4",
+              "primary-dim": "#00e5e9",
+              "outline-variant": "#45484f",
+              "on-tertiary": "#002c49",
+              "surface-dim": "#0b0e14",
+              "inverse-surface": "#f9f9ff",
+              "on-secondary-fixed-variant": "#005963",
+              "secondary": "#00e7fd",
+              "on-tertiary-fixed": "#00192d",
+              "error-dim": "#d7383b",
+              "on-primary-container": "#005b5d",
+              "error": "#ff716c",
+              "secondary-fixed-dim": "#00d8ec",
+              "secondary-dim": "#00d8ec",
+              "surface-container-low": "#10131a",
+              "primary-fixed-dim": "#00e5e9",
+              "on-tertiary-fixed-variant": "#003c61",
+              "secondary-fixed": "#00e7fd",
+              "on-error": "#490006",
+              "on-error-container": "#ffa8a3",
+              "primary-container": "#0bfbff",
+              "outline": "#73757d",
+              "tertiary-fixed": "#62b7ff",
+              "on-secondary": "#004f58",
+              "inverse-on-surface": "#52555c",
+              "on-primary-fixed-variant": "#006264",
+              "surface-container-lowest": "#000000",
+              "surface": "#0b0e14",
+              "surface-container": "#161a21",
+              "on-background": "#ecedf6",
+              "inverse-primary": "#006a6c",
+              "surface-tint": "#b3feff",
+              "on-secondary-container": "#e7fcff",
+              "on-secondary-fixed": "#003a41",
+              "surface-container-high": "#1c2028",
+              "error-container": "#9f0519"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .magic-gradient {
+        background: linear-gradient(135deg, #b3feff 0%, #00e5e9 100%);
+      }
+      .particle-bg {
+        background-image: radial-gradient(circle at 2px 2px, rgba(179, 254, 255, 0.05) 1px, transparent 0);
+        background-size: 32px 32px;
+      }
     </style>
 </head>
-<body>
-
-<div class="header-card">
-    <div class="badge">iOS 17+ 精选</div>
-    <h1>🪄 应用魔法棒</h1>
-    <p class="tagline">App MagicWand</p>
-    <p>挥动魔法棒，让效率回归纯粹</p>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b0e14]/70 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.1)] font-['Manrope'] antialiased">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#b3feff] drop-shadow-[0_0_8px_rgba(0,251,255,0.4)]">MagicWand</div>
+<div class="hidden md:flex gap-8 font-medium text-sm tracking-wide">
+<a class="text-[#b3feff] font-semibold border-b-2 border-[#b3feff] pb-1 duration-300" href="#">Features</a>
+<a class="text-[#a9abb3] hover:text-[#0bfbff] transition-colors duration-300" href="#">Privacy</a>
+<a class="text-[#a9abb3] hover:text-[#0bfbff] transition-colors duration-300" href="#">Security</a>
+<a class="text-[#a9abb3] hover:text-[#0bfbff] transition-colors duration-300" href="#">Support</a>
 </div>
-
-<main>
-    <section id="about">
-        <h2>关于应用 (About)</h2>
-        <p><strong>应用魔法棒 (App MagicWand)</strong> 是一款专为追求深度专注的用户打造的 iOS 效率工具。我们深知在现代数字化生活中，社交媒体和短视频的诱惑无处不在。通过魔法棒的一键开启，您可以暂时从数字喧嚣中解脱，专注于真正重要的事情。</p>
-        <blockquote>
-            本项目深度集成了 Apple 官方 <code>FamilyControls</code> (Screen Time API) 框架，为您提供系统级、无感化的应用访问管理体验。
-        </blockquote>
-    </section>
-
-    <section id="features">
-        <h2>核心魔法 (Features)</h2>
-        <ul>
-            <li><strong>一键隐藏：</strong> 基于 <code>ManagedSettings</code>，让选定的应用在主屏幕和 App 资源库中瞬间消失。</li>
-            <li><strong>权限隔离：</strong> 利用 <code>DeviceActivity</code> 监控，无需常驻后台，极致省电。</li>
-            <li><strong>数据安全：</strong> 无需通过网络分发，所有屏蔽逻辑均在您的设备本地通过 App Groups 实时响应。</li>
-        </ul>
-    </section>
-
-    <section id="privacy">
-        <h2>隐私政策 (Privacy Policy)</h2>
-        <div class="privacy-box">
-            <p><strong>隐私是我们的第一准则。</strong></p>
-            <ul>
-                <li><strong>零上传：</strong> 我们从不收集、不存储、不上传您的任何屏幕使用习惯。</li>
-                <li><strong>本地加密：</strong> 您的 App 屏蔽列表仅存在于您 iPhone 的安全沙盒内。</li>
-                <li><strong>Apple 标准：</strong> 我们遵循 Apple 最严格的隐私合规准则，您可以随时在系统设置中撤销“屏幕使用时间”授权。</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="support">
-        <h2>技术支持 (Support)</h2>
-        <p>如果您在权限申请或功能使用中遇到任何魔法故障，请联系我们的开发团队：</p>
-        <p>📧 <strong>邮件支持:</strong> <a href="mailto:support@yourdomain.com">support@tangkunhou.com</a></p>
-        <p>📍 <strong>开发者:</strong> tangkunhou</p>
-    </section>
+<button class="magic-gradient text-on-primary-container font-bold px-6 py-2 rounded-full active:scale-95 transition-transform text-sm">
+                Get Started
+            </button>
+</div>
+<div class="bg-gradient-to-b from-[#1c2028] to-transparent h-[1px] opacity-20"></div>
+</nav>
+<main class="pt-24 particle-bg">
+<!-- Hero Section -->
+<section class="relative px-6 py-20 md:py-32 max-w-7xl mx-auto overflow-hidden">
+<div class="flex flex-col items-center text-center space-y-8 relative z-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/15">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">auto_fix_high</span>
+<span class="text-xs font-label uppercase tracking-widest text-primary">Powered by Screen Time API</span>
+</div>
+<h1 class="text-5xl md:text-8xl font-headline font-extrabold tracking-tight text-on-surface leading-tight">
+                    魔法一挥，<span class="text-transparent bg-clip-text magic-gradient">隐私无踪</span>
+<br/>
+<span class="text-3xl md:text-5xl opacity-90 block mt-4">Magic at a flick, privacy gone.</span>
+</h1>
+<p class="max-w-2xl text-lg md:text-xl text-on-surface-variant font-light">
+                    自动化你的 App 隐身术。基于苹果原生安全接口，在特定时间与地点自动隐藏敏感应用，让隐私如魔法般消散与归位。
+                    <br/>
+<span class="text-sm italic opacity-70">Automate your App vanishing act with precision and elegance.</span>
+</p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<button class="magic-gradient text-on-primary-container font-headline font-bold px-8 py-4 rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(179,254,255,0.3)] hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">ios</span>
+                        Download on the App Store
+                    </button>
+<button class="bg-surface-container-highest text-on-surface font-headline font-bold px-8 py-4 rounded-full hover:bg-surface-variant transition-colors border border-outline-variant/10">
+                        了解技术原理 Learn More
+                    </button>
+</div>
+</div>
+<!-- Visual Representation: Dispersing Icons -->
+<div class="mt-20 relative w-full aspect-video md:aspect-[21/9] rounded-3xl bg-surface-container-low overflow-hidden group">
+<img alt="Visual magic representation" class="w-full h-full object-cover opacity-40 mix-blend-screen" data-alt="abstract digital art showing glowing cyan particles and geometric shapes morphing into app icon silhouettes in a dark void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHjZPr_KsUAZ-ZBIzqz6K_Q-rBRt3zhWjEgf-AzRUEWyJGYiuTYVLDsMDRUXDk0ryCHshOkJ4NxkV5FIGJPSpft3veVviCtDXnL_TCpyuQqzmWllHwTjrTn6Mz1KOgNFZMqoQ-iiXyQDU5tpfuf63Ekv7E20OqryscySPvL48A5i1mHXuGbdweNF9MORsztuPRzD7Vnshm-U1tal0rZlKt9kdRKEaLABOxhrAZxq9JWJrUitjwDPX8PQ8krNJlILu5r3kBZ1HDORxt"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative w-full max-w-4xl h-full flex items-center justify-center overflow-hidden">
+<!-- Simulated magical app clusters -->
+<div class="absolute w-16 h-16 rounded-2xl bg-primary/20 backdrop-blur-md flex items-center justify-center -translate-x-48 -translate-y-24 border border-primary/30">
+<span class="material-symbols-outlined text-primary text-3xl">chat</span>
+</div>
+<div class="absolute w-20 h-20 rounded-2xl bg-primary/10 backdrop-blur-xl flex items-center justify-center translate-x-32 -translate-y-40 border border-primary/20">
+<span class="material-symbols-outlined text-primary/80 text-4xl">payments</span>
+</div>
+<div class="absolute w-14 h-14 rounded-2xl bg-primary/20 backdrop-blur-md flex items-center justify-center translate-x-60 translate-y-20 border border-primary/30">
+<span class="material-symbols-outlined text-primary text-2xl">photo_library</span>
+</div>
+<!-- Central Wand Core -->
+<div class="w-1 h-64 bg-gradient-to-t from-transparent via-primary to-transparent blur-sm"></div>
+<div class="absolute w-32 h-32 rounded-full bg-primary/20 blur-3xl"></div>
+</div>
+</div>
+<!-- Recessed look via surface container -->
+<div class="absolute inset-0 ring-1 ring-inset ring-outline-variant/10 rounded-3xl pointer-events-none"></div>
+</div>
+</section>
+<!-- Bento Grid Features Section -->
+<section class="px-6 py-24 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Time Guardian -->
+<div class="md:col-span-7 bg-surface-container rounded-3xl p-8 md:p-12 relative overflow-hidden group">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">schedule</span>
+<h3 class="text-3xl font-headline font-bold text-on-surface mb-4">
+                                时间守护 <span class="text-xl font-normal text-on-surface-variant block mt-1">Time Guardian</span>
+</h3>
+<p class="text-on-surface-variant max-w-md">
+                                在预设的时间段自动隐藏指定的 App。无需手动操作，隐私在深夜或特定时刻如约而至。
+                                <br/>
+<span class="text-sm opacity-60">Auto-hide apps at set times, ensuring your digital peace of mind without lifting a finger.</span>
+</p>
+</div>
+</div>
+<!-- Abstract Visualization -->
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[200px] text-primary absolute -right-20 -top-10 rotate-12">history_toggle_off</span>
+</div>
+</div>
+<!-- Location Geofencing -->
+<div class="md:col-span-5 bg-surface-container-high rounded-3xl p-8 md:p-12 relative overflow-hidden border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">location_on</span>
+<h3 class="text-3xl font-headline font-bold text-on-surface mb-4">
+                        位置围栏 <span class="text-xl font-normal text-on-surface-variant block mt-1">Location Geofencing</span>
+</h3>
+<p class="text-on-surface-variant">
+                        踏入办公室或学校瞬间，隐私应用立即消失。智能地理感知，让手机环境完美契合当下场合。
+                    </p>
+<div class="mt-8 p-4 bg-surface-container-lowest rounded-2xl flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">work</span>
+</div>
+<div>
+<div class="text-xs font-label text-primary uppercase tracking-tighter">Active Zone</div>
+<div class="text-sm text-on-surface">Office HQ • 50m radius</div>
+</div>
+</div>
+</div>
+<!-- Magic Release -->
+<div class="md:col-span-4 bg-surface-container-high rounded-3xl p-8 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">auto_awesome</span>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-2">
+                        魔法解除 <span class="text-lg font-normal text-on-surface-variant block">Magic Release</span>
+</h3>
+<p class="text-sm text-on-surface-variant">
+                        离开限制区域或时间结束后，所有应用无缝归位。不留痕迹，不改布局，一切如初。
+                    </p>
+</div>
+<!-- Privacy Policy / Tech -->
+<div class="md:col-span-8 bg-surface-container rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8 border border-outline-variant/5">
+<div class="flex-1">
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">
+                            本地安全，绝对隐私 <span class="text-lg font-normal text-on-surface-variant block">Local &amp; Secure</span>
+</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            MagicWand 严格运行于本地设备，所有隐藏逻辑通过苹果官方 Screen Time API 实现。我们不读取您的应用数据，不上传地理位置，不请求服务器权限。
+                            <br/><br/>
+<span class="font-bold text-primary">✓ End-to-end Local Logic</span>
+<br/>
+<span class="font-bold text-primary">✓ No Data Collection</span>
+</p>
+</div>
+<div class="w-full md:w-48 h-48 bg-surface-container-highest rounded-2xl flex items-center justify-center relative group">
+<span class="material-symbols-outlined text-primary text-6xl opacity-20 group-hover:scale-110 transition-transform">shield_lock</span>
+<div class="absolute inset-4 border-2 border-primary/20 rounded-xl border-dashed"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 py-24 max-w-7xl mx-auto text-center">
+<div class="bg-gradient-to-b from-surface-container to-background rounded-[3rem] py-20 px-8 border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&amp;fit=crop&amp;q=80&amp;w=2000')] bg-cover bg-center mix-blend-overlay" data-alt="close up of retro computer electronics and high tech circuitry with glowing blue neon lights"></div>
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold mb-8 relative z-10">
+                    开启你的隐身魔法
+                    <br/>
+<span class="text-on-surface-variant font-light text-2xl md:text-4xl">Begin your vanishing act today.</span>
+</h2>
+<div class="flex justify-center relative z-10">
+<button class="magic-gradient text-on-primary-container font-headline font-bold px-12 py-5 rounded-full flex items-center gap-4 text-xl shadow-[0_20px_50px_rgba(0,251,255,0.2)] hover:shadow-[0_25px_60px_rgba(0,251,255,0.4)] transition-all">
+<span class="material-symbols-outlined text-3xl">download</span>
+                        立即下载 App MagicWand
+                    </button>
+</div>
+<p class="mt-8 text-on-surface-variant font-label text-sm uppercase tracking-widest relative z-10">
+                    Available exclusively on iPhone and iPad
+                </p>
+</div>
+</section>
 </main>
-
-<footer>
-    <hr>
-    <p style="text-align: center; color: gray;">
-        &copy; 2026 App MagicWand. Built with Apple FamilyControls API.
-    </p>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 border-t border-[#22262f] bg-[#0b0e14] font-['Manrope']">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-lg font-bold text-[#ecedf6]">MagicWand</div>
+<p class="text-sm text-[#a9abb3] opacity-80">© 2024 Tang Kunhou. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-sm text-[#a9abb3] hover:text-[#b3feff] transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-sm text-[#a9abb3] hover:text-[#b3feff] transition-colors duration-200" href="#">Terms of Service</a>
+<a class="text-sm text-[#a9abb3] hover:text-[#b3feff] transition-colors duration-200" href="#">Contact Us</a>
+</div>
+</div>
 </footer>
-
-</body>
-</html>
+</body></html>
